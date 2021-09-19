@@ -1,0 +1,2045 @@
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-16 01:54:19.744007"], ["updated_at", "2021-06-16 01:54:19.744007"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-06-16 09:02:43 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/pham.van.hoangb/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/pham.van.hoangb/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.4ms | Allocations: 595)
+Completed 200 OK in 49ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 4731)
+
+
+Started GET "/index.html" for ::1 at 2021-06-16 09:28:57 +0700
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+Started GET "/" for ::1 at 2021-06-16 09:29:38 +0700
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-06-16 09:30:24 +0700
+  
+SyntaxError (/home/pham.van.hoangb/new-app/config/routes.rb:2: syntax error, unexpected string literal, expecting `end'
+  root :to "index.html"
+           ^
+/home/pham.van.hoangb/new-app/config/routes.rb:3: syntax error, unexpected `end', expecting end-of-input):
+  
+config/routes.rb:2: syntax error, unexpected string literal, expecting `end'
+config/routes.rb:3: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:2: syntax error, unexpected string literal, expecting `end'
+config/routes.rb:3: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:2: syntax error, unexpected string literal, expecting `end'
+config/routes.rb:3: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for ::1 at 2021-06-16 09:30:44 +0700
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-06-16 09:30:45 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2021-06-16 09:36:50 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210616023459_create_notifications.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNotifications (20210616023459)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "notifications" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210616023459"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-06-16 09:41:53 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant NotifiacationController
+Did you mean?  NotificationsController):
+  
+Started GET "/" for ::1 at 2021-06-16 09:42:07 +0700
+  
+ActionController::RoutingError (uninitialized constant NotifiacationsController
+Did you mean?  NotificationsController):
+  
+Started GET "/" for ::1 at 2021-06-16 09:42:12 +0700
+  
+ActionController::RoutingError (uninitialized constant NotifiacationsController
+Did you mean?  NotificationsController):
+  
+Started GET "/" for ::1 at 2021-06-16 09:42:13 +0700
+  
+ActionController::RoutingError (uninitialized constant NotifiacationsController
+Did you mean?  NotificationsController):
+  
+Started GET "/" for ::1 at 2021-06-16 09:42:27 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 170)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: e332c6419728fac579d5
+Version: webpack 4.46.0
+Time: 2439ms
+Built at: 06/16/2021 9:42:33 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 5850.1ms | Allocations: 14971)
+Completed 200 OK in 5859ms (Views: 5851.3ms | Allocations: 17527)
+
+
+Started GET "/" for ::1 at 2021-06-16 09:43:15 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 41)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2999)
+Completed 200 OK in 6ms (Views: 5.5ms | Allocations: 3574)
+
+
+Started GET "/" for ::1 at 2021-06-16 09:43:16 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 2854)
+Completed 200 OK in 16ms (Views: 13.8ms | Allocations: 3295)
+
+
+Started GET "/" for ::1 at 2021-06-16 09:43:16 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 2853)
+Completed 200 OK in 16ms (Views: 15.2ms | Allocations: 3292)
+
+
+Started GET "/" for ::1 at 2021-06-16 09:43:23 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 6035)
+Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 0.0ms | Allocations: 9697)
+
+
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210616044156)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210616044156"]]
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-06-16 12:57:51 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotificationsController#index as HTML
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 4668)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<NotificationsController:0x00000000007738>):
+  
+app/controllers/notifications_controller.rb:4:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Admin"], ["created_at", "2021-06-16 05:58:29.812537"], ["updated_at", "2021-06-16 05:58:29.812537"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2021-06-16 12:58:35 +0700
+Processing by NotificationsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 170)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 3881a211c004ce65b694
+Version: webpack 4.46.0
+Time: 1248ms
+Built at: 06/16/2021 12:58:38 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-781b023f0f3d1a62bbd6.js    147 KiB  application  [emitted] [immutable]  application
+js/application-781b023f0f3d1a62bbd6.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-781b023f0f3d1a62bbd6.js js/application-781b023f0f3d1a62bbd6.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 419 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 269 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2929.4ms | Allocations: 7011)
+Completed 200 OK in 2963ms (Views: 2930.8ms | ActiveRecord: 1.0ms | Allocations: 16707)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 12:58:39 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 12:58:39 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:01:27 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 389)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 5988)
+Completed 200 OK in 53ms (Views: 30.0ms | ActiveRecord: 0.8ms | Allocations: 16160)
+
+
+Started GET "/apppearance_chanel.js" for ::1 at 2021-06-16 13:01:27 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/apppearance_chanel.js"):
+  
+Started GET "/cable" for ::1 at 2021-06-16 13:01:27 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:01:27 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:02:01 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 149)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3390)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 5974)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:02:01 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/apppearance_chanel.js" for ::1 at 2021-06-16 13:02:01 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/apppearance_chanel.js"):
+  
+Started GET "/cable" for ::1 at 2021-06-16 13:02:01 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:02:01 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:02:27 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 149)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3389)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 5743)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:02:27 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/appearance_chanel.js" for ::1 at 2021-06-16 13:02:27 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/appearance_chanel.js"):
+  
+Started GET "/cable" for ::1 at 2021-06-16 13:02:27 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:02:27 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:03:07 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered notifications/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2584)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2657)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 5027)
+
+
+  
+ActionView::Template::Error (Webpacker can't find appearance_chanel.js in /home/pham.van.hoangb/new-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-781b023f0f3d1a62bbd6.js",
+  "application.js.map": "/packs/js/application-781b023f0f3d1a62bbd6.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-781b023f0f3d1a62bbd6.js"
+      ],
+      "js.map": [
+        "/packs/js/application-781b023f0f3d1a62bbd6.js.map"
+      ]
+    }
+  }
+}
+):
+    1: <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+    2: <%= javascript_pack_tag 'appearance_chanel', 'data-turbolinks-track': 'reload' %>
+    3: <script>
+    4: 
+    5: </script>
+  
+app/views/notifications/index.html.erb:2
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:03:07 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:03:51 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered notifications/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2548)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2621)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms | Allocations: 4832)
+
+
+  
+ActionView::Template::Error (Webpacker can't find appearance_chanel.js in /home/pham.van.hoangb/new-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-781b023f0f3d1a62bbd6.js",
+  "application.js.map": "/packs/js/application-781b023f0f3d1a62bbd6.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-781b023f0f3d1a62bbd6.js"
+      ],
+      "js.map": [
+        "/packs/js/application-781b023f0f3d1a62bbd6.js.map"
+      ]
+    }
+  }
+}
+):
+    1: <%= javascript_pack_tag 'appearance_chanel' %>
+    2: <h1>Pusher Test</h1>
+    3: <p>
+    4:   Try publishing an event to channel <code>my-channel</code>
+  
+app/views/notifications/index.html.erb:1
+Started GET "/" for ::1 at 2021-06-16 13:09:11 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1647)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1742)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.7ms | Allocations: 11845)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%!= javascript_pack_tag 'appearance_chanel' %>
+<h1>Pusher Test</h1>
+<p>
+  Try publishing an event to channel <code>my-channel</code>
+  with event name <code>my-event</code>.
+</p>
+
+):
+1:    <%!= javascript_pack_tag 'appearance_chanel' %>
+2:    <h1>Pusher Test</h1>
+3:    <p>
+4:      Try publishing an event to channel <code>my-channel</code>
+5:      with event name <code>my-event</code>.
+6:    </p>
+  
+app/views/notifications/index.html.erb:1: syntax error, unexpected !=, expecting `end'
+app/views/notifications/index.html.erb:1: syntax error, unexpected !=, expecting `end'
+app/views/notifications/index.html.erb:1: syntax error, unexpected !=, expecting `end'
+app/views/notifications/index.html.erb:1: syntax error, unexpected !=, expecting `end'
+app/views/notifications/index.html.erb:1: syntax error, unexpected !=, expecting `end'
+app/views/notifications/index.html.erb:1: syntax error, unexpected !=, expecting `end'
+Started GET "/" for ::1 at 2021-06-16 13:09:23 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 5749)
+Completed 200 OK in 36ms (Views: 27.9ms | ActiveRecord: 0.3ms | Allocations: 8097)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:09:23 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:09:23 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:13:18 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered notifications/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2567)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2640)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms | Allocations: 5172)
+
+
+  
+ActionView::Template::Error (Webpacker can't find channels/appearance_chanel.js in /home/pham.van.hoangb/new-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-781b023f0f3d1a62bbd6.js",
+  "application.js.map": "/packs/js/application-781b023f0f3d1a62bbd6.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-781b023f0f3d1a62bbd6.js"
+      ],
+      "js.map": [
+        "/packs/js/application-781b023f0f3d1a62bbd6.js.map"
+      ]
+    }
+  }
+}
+):
+    1: <%= javascript_pack_tag 'channels/appearance_chanel' %>
+    2: <h1>Pusher Test</h1>
+    3: <p>
+    4:   Try publishing an event to channel <code>my-channel</code>
+  
+app/views/notifications/index.html.erb:1
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:13:18 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:19:27 +0700
+Processing by NotificationsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3395)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 0.6ms | Allocations: 6380)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:19:27 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:19:27 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:19:28 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3083)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 4374)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:19:28 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:19:28 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:19:28 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:20:23 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Hash: 3fe81a29052814cad796
+Version: webpack 4.46.0
+Time: 851ms
+Built at: 06/16/2021 1:20:25 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d723f3adbe7d6fdd0b90.js    129 KiB  application  [emitted] [immutable]  application
+js/application-d723f3adbe7d6fdd0b90.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d723f3adbe7d6fdd0b90.js js/application-d723f3adbe7d6fdd0b90.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 3.65 KiB {application} [optional] [built] [failed] [1 error]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+WARNING in ./app/javascript/channels/appearance_channel.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/pham.van.hoangb/new-app/app/javascript/channels/appearance_channel.js: Unexpected token, expected "," (13:40)
+
+  11 |
+  12 |   received(data) {
+> 13 |     new Notification(data["title"], body: data["body"])
+     |                                         ^
+  14 |   }
+  15 | });
+  16 |
+    at Parser._raise (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:816:17)
+    at Parser.raiseWithData (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:809:17)
+    at Parser.raise (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:770:17)
+    at Parser.unexpected (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:9905:16)
+    at Parser.expect (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:9879:28)
+    at Parser.parseExprList (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:12037:14)
+    at Parser.parseNewArguments (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:11629:25)
+    at Parser.parseNew (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:11623:10)
+    at Parser.parseNewOrNewTarget (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:11609:17)
+    at Parser.parseExprAtom (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:11237:21)
+    at Parser.parseExprSubscripts (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:10878:23)
+    at Parser.parseUpdate (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:10858:21)
+    at Parser.parseMaybeUnary (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:10836:23)
+    at Parser.parseExprOps (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:10693:23)
+    at Parser.parseMaybeConditional (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:10667:23)
+    at Parser.parseMaybeAssign (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:10630:21)
+    at Parser.parseExpressionBase (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:10576:23)
+    at allowInAnd (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:10570:39)
+    at Parser.allowInAnd (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:12339:16)
+    at Parser.parseExpression (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:10570:17)
+    at Parser.parseStatementContent (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:12676:23)
+    at Parser.parseStatement (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:12545:17)
+    at Parser.parseBlockOrModuleBlockBody (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:13134:25)
+    at Parser.parseBlockBody (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:13125:10)
+    at Parser.parseBlock (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:13109:10)
+    at Parser.parseFunctionBody (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:11992:24)
+    at Parser.parseFunctionBodyAndFinish (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:11976:10)
+    at Parser.parseMethod (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:11926:10)
+    at Parser.parseObjectMethod (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:11854:19)
+    at Parser.parseObjPropValue (/home/pham.van.hoangb/new-app/node_modules/@babel/parser/lib/index.js:11887:23)
+ @ ./app/javascript/channels sync _channel\.js$ ./appearance_channel.js
+ @ ./app/javascript/channels/index.js
+ @ ./app/javascript/packs/application.js
+
+  Rendered layout layouts/application.html.erb (Duration: 2336.2ms | Allocations: 4529)
+Completed 200 OK in 2339ms (Views: 2336.7ms | ActiveRecord: 0.1ms | Allocations: 5756)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:20:25 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:20:40 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: fe5285d7fc5a90d44706
+Version: webpack 4.46.0
+Time: 638ms
+Built at: 06/16/2021 1:20:41 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5ff0a90ebae5e697a2e1.js    147 KiB  application  [emitted] [immutable]  application
+js/application-5ff0a90ebae5e697a2e1.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-5ff0a90ebae5e697a2e1.js js/application-5ff0a90ebae5e697a2e1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 399 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 269 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1732.0ms | Allocations: 4193)
+Completed 200 OK in 1735ms (Views: 1733.1ms | ActiveRecord: 0.1ms | Allocations: 5389)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:20:41 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:20:41 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:21:57 +0700
+Processing by NotificationsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3099)
+Completed 200 OK in 18ms (Views: 6.8ms | ActiveRecord: 0.8ms | Allocations: 8613)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:21:57 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:21:57 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:24:26 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 39)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 594e193be69292af9fac
+Version: webpack 4.46.0
+Time: 660ms
+Built at: 06/16/2021 1:24:28 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-89b3acf26e7aa7c47778.js    147 KiB  application  [emitted] [immutable]  application
+js/application-89b3acf26e7aa7c47778.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-89b3acf26e7aa7c47778.js js/application-89b3acf26e7aa7c47778.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 456 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 269 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1794.5ms | Allocations: 4666)
+Completed 200 OK in 1804ms (Views: 1796.6ms | ActiveRecord: 0.3ms | Allocations: 6108)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:24:28 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:28:09 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: d75ba5e7fb35d6f43e7f
+Version: webpack 4.46.0
+Time: 624ms
+Built at: 06/16/2021 1:28:11 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-91a0f1ef2de4132a69c6.js    147 KiB  application  [emitted] [immutable]  application
+js/application-91a0f1ef2de4132a69c6.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-91a0f1ef2de4132a69c6.js js/application-91a0f1ef2de4132a69c6.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 399 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 269 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 549 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1744.7ms | Allocations: 4062)
+Completed 200 OK in 1755ms (Views: 1745.5ms | ActiveRecord: 0.2ms | Allocations: 5258)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:28:11 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:28:11 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:29:40 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 753be51ff405cf75a728
+Version: webpack 4.46.0
+Time: 613ms
+Built at: 06/16/2021 1:29:41 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-17cf46f69c0176041ef2.js    148 KiB  application  [emitted] [immutable]  application
+js/application-17cf46f69c0176041ef2.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-17cf46f69c0176041ef2.js js/application-17cf46f69c0176041ef2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 485 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 269 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1697.0ms | Allocations: 4466)
+Completed 200 OK in 1705ms (Views: 1698.1ms | ActiveRecord: 0.2ms | Allocations: 5670)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:29:41 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:29:41 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:29:41 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:31:22 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 84c48cdd96e4fb18a9e9
+Version: webpack 4.46.0
+Time: 607ms
+Built at: 06/16/2021 1:31:23 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b7d3b6ff7bacaf3416d8.js    147 KiB  application  [emitted] [immutable]  application
+js/application-b7d3b6ff7bacaf3416d8.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-b7d3b6ff7bacaf3416d8.js js/application-b7d3b6ff7bacaf3416d8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 399 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 298 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1689.6ms | Allocations: 4263)
+Completed 200 OK in 1700ms (Views: 1693.2ms | ActiveRecord: 0.3ms | Allocations: 5686)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:31:23 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:31:24 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:31:24 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:32:59 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: dbf3c50ec2d55ffada95
+Version: webpack 4.46.0
+Time: 619ms
+Built at: 06/16/2021 1:33:01 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-05c3062834508c185859.js    147 KiB  application  [emitted] [immutable]  application
+js/application-05c3062834508c185859.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-05c3062834508c185859.js js/application-05c3062834508c185859.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 361 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 298 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1691.4ms | Allocations: 4351)
+Completed 200 OK in 1703ms (Views: 1693.3ms | ActiveRecord: 0.3ms | Allocations: 5674)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:33:01 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:33:01 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:33:01 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:33:52 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 511cc6ba837d7b26f164
+Version: webpack 4.46.0
+Time: 602ms
+Built at: 06/16/2021 1:33:54 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5bbfe0a37e95f7105f0e.js    147 KiB  application  [emitted] [immutable]  application
+js/application-5bbfe0a37e95f7105f0e.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-5bbfe0a37e95f7105f0e.js js/application-5bbfe0a37e95f7105f0e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 319 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 298 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1689.0ms | Allocations: 4348)
+Completed 200 OK in 1699ms (Views: 1692.9ms | ActiveRecord: 0.3ms | Allocations: 5675)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:33:54 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:33:54 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:33:54 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:34:39 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 8485561bfd059414641e
+Version: webpack 4.46.0
+Time: 617ms
+Built at: 06/16/2021 1:34:40 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-56359ab8d42dac606528.js    147 KiB  application  [emitted] [immutable]  application
+js/application-56359ab8d42dac606528.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-56359ab8d42dac606528.js js/application-56359ab8d42dac606528.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 313 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 298 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1706.7ms | Allocations: 4147)
+Completed 200 OK in 1716ms (Views: 1708.7ms | ActiveRecord: 0.3ms | Allocations: 5473)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:34:40 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:34:40 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:34:40 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:34:41 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:34:50 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2875)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4071)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:34:50 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:34:50 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:35:49 +0700
+Processing by NotificationsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3109)
+Completed 200 OK in 15ms (Views: 5.1ms | ActiveRecord: 0.8ms | Allocations: 8638)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:35:51 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:35:51 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:4:in `subscribed'
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:36:12 +0700
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:36:12 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:36:12 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:4:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:36:27 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3586)
+Completed 200 OK in 26ms (Views: 18.7ms | ActiveRecord: 0.3ms | Allocations: 5389)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:36:27 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:36:27 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:36:27 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (byebug):1:in `subscribed'
+  [1m[36mCACHE User Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:37:03 +0700
+  ↳ app/channels/appearance_channel.rb:4:in `subscribed'
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:38:42 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:38:42 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/channels/appearance_channel.rb:4:in `subscribed'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:4:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:38:46 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3130)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 3924)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:38:46 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:38:46 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:38:46 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:4:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:39:11 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3120)
+Completed 200 OK in 7ms (Views: 5.9ms | Allocations: 3891)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:39:13 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:39:13 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:40:32 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3004)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 3546)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:40:33 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:40:33 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:41:20 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 917bd5af4d8635336f23
+Version: webpack 4.46.0
+Time: 610ms
+Built at: 06/16/2021 1:41:21 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-8c8c3d7ee47dd84d8807.js    147 KiB  application  [emitted] [immutable]  application
+js/application-8c8c3d7ee47dd84d8807.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-8c8c3d7ee47dd84d8807.js js/application-8c8c3d7ee47dd84d8807.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 313 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 297 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1745.7ms | Allocations: 4124)
+Completed 200 OK in 1747ms (Views: 1746.2ms | ActiveRecord: 0.0ms | Allocations: 4566)
+
+
+Started GET "/cabl" for ::1 at 2021-06-16 13:41:21 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/cabl"):
+  
+Started GET "/cabl" for ::1 at 2021-06-16 13:41:27 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/cabl"):
+  
+Started GET "/cabl" for ::1 at 2021-06-16 13:41:31 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/cabl"):
+  
+Started GET "/cabl" for ::1 at 2021-06-16 13:41:36 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/cabl"):
+  
+Started GET "/cabl" for ::1 at 2021-06-16 13:41:43 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/cabl"):
+  
+Started GET "/cabl" for ::1 at 2021-06-16 13:41:51 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/cabl"):
+  
+Started GET "/" for ::1 at 2021-06-16 13:41:53 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Hash: 8485561bfd059414641e
+Version: webpack 4.46.0
+Time: 505ms
+Built at: 06/16/2021 1:41:55 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-56359ab8d42dac606528.js    147 KiB  application  [emitted] [immutable]  application
+js/application-56359ab8d42dac606528.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-56359ab8d42dac606528.js js/application-56359ab8d42dac606528.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 313 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 298 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1585.2ms | Allocations: 4119)
+Completed 200 OK in 1587ms (Views: 1585.9ms | ActiveRecord: 0.0ms | Allocations: 4603)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:41:55 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:41:55 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/index" for ::1 at 2021-06-16 13:43:57 +0700
+Processing by NotificationsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3099)
+Completed 200 OK in 16ms (Views: 5.9ms | ActiveRecord: 1.1ms | Allocations: 8593)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:44:00 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:44:00 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:44:04 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:44:04 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:44:06 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:44:06 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:44:08 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/pham.van.hoangb/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/pham.van.hoangb/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 13.1ms | Allocations: 267)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 1362)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:44:08 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:44:40 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 13:45:42 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/pham.van.hoangb/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/pham.van.hoangb/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.5ms | Allocations: 260)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 1218)
+
+
+Started GET "/index" for ::1 at 2021-06-16 13:45:52 +0700
+Processing by NotificationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:4:in `index'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 3382)
+Completed 200 OK in 34ms (Views: 25.1ms | ActiveRecord: 0.2ms | Allocations: 5899)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:45:52 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:45:52 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/index" for ::1 at 2021-06-16 13:47:49 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3100)
+Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 3871)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:47:50 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:47:50 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/index" for ::1 at 2021-06-16 13:48:14 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3120)
+Completed 200 OK in 6ms (Views: 4.9ms | Allocations: 3892)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:48:15 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:48:15 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 13:48:25 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3203)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 4523)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:48:25 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:48:25 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:48:25 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:48:30 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:48:30 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:48:32 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 13:49:18 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 4b129b2adfe2ef5b192b
+Version: webpack 4.46.0
+Time: 614ms
+Built at: 06/16/2021 1:49:20 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-8dc157c34d5cb2663cfd.js    147 KiB  application  [emitted] [immutable]  application
+js/application-8dc157c34d5cb2663cfd.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-8dc157c34d5cb2663cfd.js js/application-8dc157c34d5cb2663cfd.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 316 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 298 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1731.9ms | Allocations: 4064)
+Completed 200 OK in 1739ms (Views: 1733.9ms | ActiveRecord: 0.2ms | Allocations: 5461)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:49:20 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:49:20 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:49:20 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/index" for ::1 at 2021-06-16 13:49:46 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2865)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3307)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:49:46 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:49:46 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:49:46 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/index" for ::1 at 2021-06-16 13:49:48 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 2865)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 3308)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:49:48 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:49:48 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:49:48 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 13:49:51 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 2953)
+Completed 200 OK in 21ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 4256)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:49:51 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:49:52 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:49:52 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 13:50:27 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3070)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 4252)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 13:50:28 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:50:28 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 13:51:49 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/pham.van.hoangb/new-app/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: bfbab60c00be14d092e8
+Version: webpack 4.46.0
+Time: 620ms
+Built at: 06/16/2021 1:51:51 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-2787166e70031caa7bfa.js    147 KiB  application  [emitted] [immutable]  application
+js/application-2787166e70031caa7bfa.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-2787166e70031caa7bfa.js js/application-2787166e70031caa7bfa.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 188 bytes {application} [built]
+[./app/javascript/channels/appearance_channel.js] 302 bytes {application} [optional] [built]
+[./app/javascript/channels/consumer.js] 298 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1782.9ms | Allocations: 4676)
+Completed 200 OK in 1794ms (Views: 1786.8ms | ActiveRecord: 0.3ms | Allocations: 6131)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:51:51 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 13:51:51 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 13:51:51 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:56:50 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 13:56:50 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/" for ::1 at 2021-06-16 14:14:44 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/pham.van.hoangb/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/pham.van.hoangb/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.4ms | Allocations: 265)
+Completed 200 OK in 7ms (Views: 5.6ms | Allocations: 1241)
+
+
+Started GET "/" for ::1 at 2021-06-16 14:14:44 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/pham.van.hoangb/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/pham.van.hoangb/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 45)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 511)
+
+
+Started GET "/index" for ::1 at 2021-06-16 14:14:49 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3419)
+Completed 200 OK in 14ms (Views: 11.5ms | Allocations: 4851)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 14:14:49 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:14:49 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/index" for ::1 at 2021-06-16 14:15:04 +0700
+Processing by NotificationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2920)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3459)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 14:15:04 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 14:15:04 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:15:04 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 14:15:46 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 2984)
+Completed 200 OK in 398ms (Views: 16.7ms | ActiveRecord: 0.1ms | Allocations: 48265)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 14:15:47 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:15:47 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 14:16:44 +0700
+Processing by NotificationsController#show as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3088)
+Completed 200 OK in 211ms (Views: 17.6ms | ActiveRecord: 1.1ms | Allocations: 9926)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 14:16:47 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:16:47 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 14:16:51 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:16:51 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 14:16:55 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3035)
+Completed 200 OK in 62ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 5516)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 14:16:57 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 14:16:57 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:16:57 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 14:18:42 +0700
+Processing by NotificationsController#show as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.0ms | Allocations: 7813)
+
+
+  
+NameError (undefined local variable or method `pusher' for #<NotificationsController:0x00000000014230>
+Did you mean?  super):
+  
+app/controllers/notifications_controller.rb:13:in `show'
+Started GET "/cable" for ::1 at 2021-06-16 14:18:48 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:18:48 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 14:24:10 +0700
+Processing by NotificationsController#show as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3098)
+Completed 200 OK in 210ms (Views: 17.5ms | ActiveRecord: 1.0ms | Allocations: 9448)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 14:24:10 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:24:10 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 14:24:15 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:24:15 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 14:24:18 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3045)
+Completed 200 OK in 62ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 5501)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 14:24:20 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 14:24:20 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:24:20 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 14:24:37 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3035)
+Completed 200 OK in 55ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 5494)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 14:24:37 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:24:37 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 14:24:48 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 14:25:25 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3035)
+Completed 200 OK in 257ms (Views: 16.2ms | ActiveRecord: 0.1ms | Allocations: 5607)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 14:25:28 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 14:25:28 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:25:28 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 14:54:23 +0700
+Processing by NotificationsController#show as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 3393)
+Completed 200 OK in 252ms (Views: 26.9ms | ActiveRecord: 0.4ms | Allocations: 9961)
+
+
+Started GET "/cable" for ::1 at 2021-06-16 14:54:23 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:54:23 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 14:54:28 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:54:28 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 14:54:30 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3079)
+Completed 200 OK in 65ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 5555)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 14:54:30 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 14:54:30 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:54:30 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 14:54:34 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 14:54:34 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:54:34 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 14:54:42 +0700
+Processing by NotificationsController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+AppearanceChannel transmitting {"title"=>"New things!", "body"=>"All the news fit to print"} (via streamed from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3035)
+Completed 200 OK in 60ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 5469)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 14:54:46 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/cable" for ::1 at 2021-06-16 14:54:46 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 14:54:46 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 14:55:14 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 14:58:40 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Started GET "/show" for ::1 at 2021-06-16 17:35:45 +0700
+Processing by NotificationsController#show as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+Started GET "/show" for 127.0.0.1 at 2021-06-16 17:37:06 +0700
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 3056)
+Completed 200 OK in 80978ms (Views: 21.1ms | ActiveRecord: 0.4ms | Allocations: 16928)
+
+
+Processing by NotificationsController#show as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:8:in `show'
+[ActionCable] Broadcasting to appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE: {:title=>"New things!", :body=>"All the news fit to print"}
+Started GET "/cable" for ::1 at 2021-06-16 17:56:55 +0700
+Started GET "/cable/" [WebSocket] for ::1 at 2021-06-16 17:56:55 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Rendering layout layouts/application.html.erb
+  Rendering notifications/index.html.erb within layouts/application
+  Rendered notifications/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3077)
+Completed 200 OK in 1189266ms (Views: 8.9ms | ActiveRecord: 1.3ms | Allocations: 18328)
+
+
+Started GET "/cable" for 127.0.0.1 at 2021-06-16 17:56:55 +0700
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2021-06-16 17:56:55 +0700
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/channels/appearance_channel.rb:3:in `subscribed'
+AppearanceChannel is transmitting the subscription confirmation
+AppearanceChannel is streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
+Finished "/cable/" [WebSocket] for ::1 at 2021-06-16 18:09:27 +0700
+AppearanceChannel stopped streaming from appearance:Z2lkOi8vbmV3LWFwcC9Vc2VyLzE
